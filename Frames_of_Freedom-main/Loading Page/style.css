@@ -1,0 +1,95 @@
+@property --opacity{
+    syntax: "<percentage>";
+    initial-value: 100%;
+    inherits: false;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+span.mainH{
+    position:fixed;
+    text-align: center;
+    top:45px;
+    font-size: 50px;
+    left:440px;
+    color:white;
+    background-color:black;
+}
+h1{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:1280px;
+    height:100px;
+    background-color: black;
+}
+h2{
+    font-size: 30px;
+}
+.Intro{
+    top:0;
+    height: 100vh;
+    background-color: white;
+    font-size: 19px;
+}
+
+
+.container div{
+    opacity: 80%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    right:0;
+}
+
+.bg1{
+    background: conic-gradient(rgb(10,137,1) var(--opacity),transparent var(--opacity));
+    height:100%;
+    width:100%;
+    animation: animate 1s ease-in-out forwards;
+    animation-delay: 2s;
+}
+.bg2{
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(white var(--opacity),transparent var(--opacity));
+    background-size: cover;
+    animation: animate 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+.bg2::after{
+    content:"";
+    position:absolute;
+    background: conic-gradient(rgb(255,154,47) var(--opacity),transparent var(--opacity));
+    height:100%;
+    width:100%;
+    animation: animate 1s ease-in-out forwards;
+}
+@keyframes animate {
+    0% {
+        --opacity:100%;
+    }
+    100% {
+        --opacity:0%;
+    }
+}
+.count-wrapper{
+    color:rgb(0,0,137);
+    height:100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    font-size: 150px;
+
+}.new{
+    color:solid red;
+}

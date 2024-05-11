@@ -1,0 +1,311 @@
+
+/* Custom Property for Opacity */
+@property --opacity {
+    syntax: "<percentage>";
+    initial-value: 100%;
+    inherits: false;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'morison';
+}
+
+/* Set full width and height for HTML and body elements */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Loader CSS */
+
+.container div{
+    opacity: 80%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    right:0;
+}
+
+.bg1{
+    background: conic-gradient(rgb(10,137,1) var(--opacity),transparent var(--opacity));
+    height:100%;
+    width:100%;
+    animation: animate 1s ease-in-out forwards;
+    animation-delay: 2s;
+}
+.bg2{
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(white var(--opacity),transparent var(--opacity));
+    background-size: cover;
+    animation: animate 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+.bg2::after{
+    content:"";
+    position:absolute;
+    background: conic-gradient(rgb(255,154,47) var(--opacity),transparent var(--opacity));
+    height:100%;
+    width:100%;
+    animation: animate 1s ease-in-out forwards;
+}
+@keyframes animate {
+    0% {
+        --opacity:100%;
+    }
+    100% {
+        --opacity:0%;
+    }
+}
+.count-wrapper{
+    color:rgb(0,0,137);
+    height:100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    font-size: 150px;
+
+}
+
+span {
+    color: #FEA42A;
+}
+
+.green {
+    color: #88D70A;
+}
+
+/* Styling for the navigation bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 100px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+    padding-bottom: 3px;
+}
+
+a:visited {
+    color : #000;
+}
+
+li:hover {
+    color: #FEA42A;
+    border-bottom: 1px solid #FEA42A;
+}
+
+.red-li {
+    color: #FEA42A;
+    border-bottom: 1px solid #FEA42A;
+}
+
+/* Main section heading styles */
+main h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+main h1:nth-child(1) {
+    margin-top: 120px;
+}
+
+/* Scroll down arrow styling */
+.scroll {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.scroll img {
+    height: 80px;
+    margin-left: 18px;
+    margin-bottom: 20px;
+}
+
+/* Image section styling */
+.image-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow-x: hidden;
+}
+
+.img-section-child {
+    height: 165px;
+    width: 180px;
+    margin-top: 30px;
+    background-size: cover;
+}
+
+.img-section5,
+.img-section1 {
+    height: 400px;
+    width: 200px;
+    background-image: url(images/gslv.jpeg);
+    background-size: 240px;
+}
+
+.img-section3 {
+    height: 100vh;
+    width: 400px;
+    overflow: hidden;
+}
+
+.test-div {
+    color: white;
+}
+
+
+/* marquee setion */
+
+.marquee-section {
+    height : 60vh;
+}
+
+.marquee__part {
+    flex-shrink: 0;
+    padding: 0 4px;
+    font-smooth: always;
+}
+  
+.marquee {
+    background: #eee;
+    margin-top: 40vh;
+    transform: skew(-0.06turn, 5deg);
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.667vw;
+    padding: 32px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.second-marquee {
+    margin-top: -50px;
+    transform: skew(-0.06turn, -5deg); 
+}
+  
+.marquee__inner {
+    -webkit-font-smoothing: antialiased;
+      width: fit-content;
+      display: flex;
+      flex: auto;
+      flex-direction: row;
+}
+  
+.spacer {
+    height: 150px;
+}
+  
+/* marquee section ends */
+
+
+/* timeline css */
+
+.timeline-heading {
+    text-align: center;
+    font-size: 30px;
+    color:#FEA42A;
+}
+
+.text-container h1 {
+    color:#88D70A;
+    margin-bottom: 20px;
+}
+
+.box1, .box3,.box5,.box7 {
+    display: flex;
+    align-items: center;
+    height: 70vh;
+    justify-content: center;
+    margin: 30px 50px;
+    border-radius: 15px;
+}
+
+.box2 ,.box4,.box6,.box8{
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    align-items: center;
+    margin: 30px 50px;
+    border-radius: 15px;
+}
+.content1, .content3,.content5,.content7{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: auto;
+    padding: auto;
+
+}
+.content2, .content4,.content6,.content8{
+    font-size: 20px;
+    margin-right: 20px;
+    margin-top: auto;
+    padding: auto;
+}
+.image1, .image3,.image5,.image7{
+    padding: 50px;
+}
+
+.image2, .image4, .image6, .image8{
+    padding: 50px;
+}
+.image1 img, .image3 img, .image5 img, .image7 img{
+    height: 50vh;
+}
+.image2 img, .image4 img, .image6 img, .image8 img{
+    height: 50vh;
+}
+.container3 {
+    margin-top: 100px;
+    height: 100vh;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #eee;
+    width : 100%;
+    height: 40vh;
+}
+
+.footer-section2 {
+    font-size : 26px;
+    font-weight: 600;
+}
+
+.footer-section1 img {
+    height: 25vh;
+}
+
+.text-section {
+    margin-top: 100px;
+}
+
+
